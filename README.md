@@ -51,6 +51,11 @@ Parameters:
 - The chosen leaf and a step-by-step proof list (sibling hash + position)
 - Final verification of proof against the root (soundness check)
 
+## How it relates to Aztec/ZK soundness
+- ZK rollups and privacy systems (Aztec-like designs) rely on succinct commitments (roots) over large datasets
+- Users prove statements like “I’m in this set” using short inclusion proofs without revealing the entire set
+- This demo mirrors that pattern using ERC-20 balances as the committed data, demonstrating the soundness aspect of proofs of inclusion
+
 ## Notes
 - Works on any EVM network; plug in an RPC for Mainnet, Sepolia, Polygon, Optimism, Arbitrum, etc.
 - Balances are read live from the chain; large holder lists may hit rate limits. Start with small sets (e.g., 4–32).
