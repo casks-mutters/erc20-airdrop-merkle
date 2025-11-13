@@ -115,6 +115,7 @@ def main():
         print("❌ RPC connection failed. Check RPC_URL or provider availability.")
         sys.exit(1)
     print("🌐 Network:", network_name(w3.eth.chain_id))
+    print("🔗 chainId:", w3.eth.chain_id)
 
     # Token contract
     token = w3.eth.contract(address=token_addr, abi=ERC20_ABI)
