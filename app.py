@@ -110,6 +110,8 @@ def main():
         sys.exit(1)
 
     # Web3 init
+    if "your_api_key" in RPC_URL:
+    print("⚠️ RPC_URL still has placeholder API key; set a real endpoint.")
     w3 = Web3(Web3.HTTPProvider(RPC_URL))
     if not w3.is_connected():
         print("❌ RPC connection failed. Check RPC_URL or provider availability.")
